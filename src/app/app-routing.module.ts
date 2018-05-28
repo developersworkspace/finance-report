@@ -4,8 +4,8 @@ import { HomeLoanRouteComponent } from './home-loan-route/home-loan-route.compon
 import { TotalsRouteComponent } from './totals-route/totals-route.component';
 
 const appRoutes: Routes = [
-  { path: '', component: HomeLoanRouteComponent },
-  { path: 'totals', component: TotalsRouteComponent },
+  { path: '', component: TotalsRouteComponent },
+  { path: 'home-loan', component: HomeLoanRouteComponent },
 ];
 
 @NgModule({

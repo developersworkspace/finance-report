@@ -4,7 +4,7 @@ import { HomeLoanViewEntry } from './home-loan-view-entry';
 export class HomeLoan {
 
     constructor(
-        public entries: HomeLoanEntry[],
+        protected entries: HomeLoanEntry[],
     ) {
 
     }
