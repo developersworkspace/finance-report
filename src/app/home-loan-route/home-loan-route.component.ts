@@ -107,6 +107,7 @@ export class HomeLoanRouteComponent {
       new HomeLoanEntry(432108.74, 4006.36, 4734.37, new Date(2018, 1, 27)),
       new HomeLoanEntry(431055.91, 3613.14, 4734.37, new Date(2018, 2, 27)),
       new HomeLoanEntry(426172.09, 3902.45, 4654.67, new Date(2018, 3, 27)),
+      new HomeLoanEntry(425317.62, 3731.80, 4654.67, new Date(2018, 4, 27)),
     ];
 
     this.homeLoan = new HomeLoan(this.homeLoanEntries);
