@@ -31,10 +31,10 @@ export class TotalsRouteComponent {
   constructor() {
     this.totalsEntries = [
       new TotalsEntry(12015.37, -1529.03, 16100.00, 122852.87, new Date(2018, 0, 31)),
-      new TotalsEntry(9124.55, -1907.91, 16100.00, 134115.78, new Date(2018, 1, 31)),
+      new TotalsEntry(9124.55, -1907.91, 16100.00, 134115.78, new Date(2018, 1, 28)),
       new TotalsEntry(14088.66, -7060.58, 16100.00, 137895.92, new Date(2018, 2, 31)),
-      new TotalsEntry(11938.97, -3837.2, 20300.00, 78542.55, new Date(2018, 3, 31)),
-      new TotalsEntry(12602.12, -893, 20300.00, 44835.35, new Date(2018, 4, 31)),
+      new TotalsEntry(11938.97, -3837.2, 20300.00, 78542.55, new Date(2018, 3, 30)),
+      new TotalsEntry(8063.58, -1416.20, 20300.00, 44878.69, new Date(2018, 4, 31)),
     ];
 
     this.totals = new Totals(this.totalsEntries);
