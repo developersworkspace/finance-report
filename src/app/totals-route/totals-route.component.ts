@@ -35,6 +35,8 @@ export class TotalsRouteComponent {
       new TotalsEntry(14088.66, -7060.58, 16100.00, 137895.92, new Date(2018, 2, 31)),
       new TotalsEntry(11938.97, -3837.2, 20300.00, 78542.55, new Date(2018, 3, 30)),
       new TotalsEntry(8063.58, -1416.20, 20300.00, 44878.69, new Date(2018, 4, 31)),
+
+      // new TotalsEntry(6859.30, -2762.00, 20300.00, 14654.62, new Date(2018, 5, 30)),
     ];
 
     this.totals = new Totals(this.totalsEntries);
