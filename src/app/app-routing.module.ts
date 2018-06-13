@@ -1,11 +1,9 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { HomeLoanRouteComponent } from './home-loan-route/home-loan-route.component';
-import { TotalsRouteComponent } from './totals-route/totals-route.component';
+import { HomeRouteComponent } from './home-route/home-route.component';
 
 const appRoutes: Routes = [
-  { path: '', component: TotalsRouteComponent },
-  { path: 'home-loan', component: HomeLoanRouteComponent },
+  { path: '', component: HomeRouteComponent },
 ];
 
 @NgModule({

@@ -1,7 +1,7 @@
-export class HomeLoanEntry {
+export class AccountBalance {
 
     constructor(
-        public balance: number,
+        public value: number,
         public interest: number,
         public repayment: number,
         public timestamp: Date,
