@@ -48,10 +48,36 @@ export class HomeRouteComponent implements OnInit {
         data: account.balances.map((balance: AccountBalance) => {
           return {
             x: balance.timestamp.getTime(),
-            y: balance.value,
+            y: Math.round(balance.value * 100) / 100,
           };
         }),
         name: `${account.name} Balance`,
+      });
+    }
+
+    for (const account of this.accounts) {
+      if (!account.loan) {
+        continue;
+      }
+
+      this.chart.addSerie({
+        data: account.balances.map((balance: AccountBalance) => {
+          return {
+            x: balance.timestamp.getTime(),
+            y: Math.round(balance.interest * 100) / 100,
+          };
+        }),
+        name: `${account.name} Interest`,
+      });
+
+      this.chart.addSerie({
+        data: account.balances.map((balance: AccountBalance) => {
+          return {
+            x: balance.timestamp.getTime(),
+            y: Math.round(balance.repayment * 100) / 100,
+          };
+        }),
+        name: `${account.name} Repayment`,
       });
     }
   }
