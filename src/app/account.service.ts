@@ -32,8 +32,7 @@ export class AccountService {
       new AccountBalance(11938.97, null, null, new Date(2018, 3, 30)),
       new AccountBalance(8063.58, null, null, new Date(2018, 4, 31)),
       new AccountBalance(6732.41, null, null, new Date(2018, 5, 30)),
-
-      new AccountBalance(12492.33, null, null, new Date(2018, 6, 31)),
+      new AccountBalance(21591.10, null, null, new Date(2018, 6, 31)),
     ], true, false, 'Cheque');
   }
 
@@ -45,7 +44,7 @@ export class AccountService {
       new AccountBalance(-3837.2, null, null, new Date(2018, 3, 30)),
       new AccountBalance(-1416.20, null, null, new Date(2018, 4, 31)),
       new AccountBalance(0, null, null, new Date(2018, 5, 30)),
-      new AccountBalance(0, null, null, new Date(2018, 6, 31)),
+      new AccountBalance(-3319.87, null, null, new Date(2018, 6, 31)),
     ], false, false, 'Credit');
   }
 
@@ -65,8 +64,7 @@ export class AccountService {
       new AccountBalance(-426172.09, 3902.45, 4654.67, new Date(2018, 3, 30)),
       new AccountBalance(-425317.62, 3731.80, 4654.67, new Date(2018, 4, 31)),
       new AccountBalance(-424579.77, 3848.42, 4654.67, new Date(2018, 5, 30)),
-
-      new AccountBalance(-424579.77, 3848.42, 4654.67, new Date(2018, 6, 31)),
+      new AccountBalance(-423710.03, 3716.53, 4655.27, new Date(2018, 6, 31)),
     ], false, true, 'Home Loan Bond');
   }
 
@@ -110,8 +108,7 @@ export class AccountService {
       new AccountBalance(78542.55, null, null, new Date(2018, 3, 30)),
       new AccountBalance(44878.69, null, null, new Date(2018, 4, 31)),
       new AccountBalance(28981.98, null, null, new Date(2018, 5, 30)),
-
-      new AccountBalance(28981.98 + 12000, null, null, new Date(2018, 6, 31)),
+      new AccountBalance(41584.64, null, null, new Date(2018, 6, 31)),
     ], true, false, 'Savings');
   }
 

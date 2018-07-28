@@ -45,13 +45,15 @@ export class HomeRouteComponent implements OnInit {
   protected addAccountSeries(): void {
     for (const account of this.accounts) {
       this.chart.addSerie({
-        data: account.balances.map((balance: AccountBalance) => {
-          return {
-            x: balance.timestamp.getTime(),
-            y: Math.round(balance.value * 100) / 100,
-          };
-        }),
+        data: account.getBalanceSeries(),
         name: `${account.name} Balance`,
+        visible: false,
+      });
+
+      this.chart.addSerie({
+        data: account.getBalanceDeltaSeries(),
+        name: `${account.name} Balance Delta`,
+        visible: false,
       });
     }
 
@@ -61,23 +63,27 @@ export class HomeRouteComponent implements OnInit {
       }
 
       this.chart.addSerie({
-        data: account.balances.map((balance: AccountBalance) => {
-          return {
-            x: balance.timestamp.getTime(),
-            y: Math.round(balance.interest * 100) / 100,
-          };
-        }),
+        data: account.getInterestSeries(),
         name: `${account.name} Interest`,
+        visible: false,
       });
 
       this.chart.addSerie({
-        data: account.balances.map((balance: AccountBalance) => {
-          return {
-            x: balance.timestamp.getTime(),
-            y: Math.round(balance.repayment * 100) / 100,
-          };
-        }),
+        data: account.getInterestDeltaSeries(),
+        name: `${account.name} Interest Delta`,
+        visible: false,
+      });
+
+      this.chart.addSerie({
+        data: account.getRepaymentSeries(),
         name: `${account.name} Repayment`,
+        visible: false,
+      });
+
+      this.chart.addSerie({
+        data: account.getRepaymentDeltaSeries(),
+        name: `${account.name} Repayment Delta`,
+        visible: false,
       });
     }
   }
@@ -98,6 +104,12 @@ export class HomeRouteComponent implements OnInit {
       data,
       name: `Cash`,
     });
+
+    this.chart.addSerie({
+      data: this.getDelta(data),
+      name: `Cash Delta`,
+      visible: false,
+    });
   }
 
   protected addNetWorthSeries(): void {
@@ -115,6 +127,12 @@ export class HomeRouteComponent implements OnInit {
     this.chart.addSerie({
       data,
       name: `Net Worth`,
+    });
+
+    this.chart.addSerie({
+      data: this.getDelta(data),
+      name: `Net Worth Delta`,
+      visible: false,
     });
   }
 
@@ -150,6 +168,19 @@ export class HomeRouteComponent implements OnInit {
     }
 
     return Math.round(sum * 100) / 100;
+  }
+
+  protected getDelta(data: { x: number, y: number }[]): {x: number, y: number}[] {
+    const result: {x: number, y: number }[] = [];
+
+    for (let index = 1; index < data.length; index++) {
+      result.push({
+        x: data[index].x,
+        y: Math.round((data[index].y - data[index - 1].y) * 100) / 100,
+      });
+    }
+
+    return result;
   }
 
   protected getUniqueTimestamps(): Date[] {
