@@ -34,7 +34,7 @@ export class AccountService {
       new AccountBalance(6732.41, null, null, new Date(2018, 5, 30)),
       new AccountBalance(21591.10, null, null, new Date(2018, 6, 31)),
 
-      new AccountBalance(19108.25, null, null, new Date(2018, 7, 31)),
+      new AccountBalance(4029.00, null, null, new Date(2018, 7, 31)),
     ], true, false, 'Cheque');
   }
 
@@ -48,7 +48,7 @@ export class AccountService {
       new AccountBalance(0, null, null, new Date(2018, 5, 30)),
       new AccountBalance(-3319.87, null, null, new Date(2018, 6, 31)),
 
-      new AccountBalance(-6725.01, null, null, new Date(2018, 7, 31)),
+      new AccountBalance(286.63, null, null, new Date(2018, 7, 31)),
     ], false, false, 'Credit');
   }
 
@@ -118,7 +118,7 @@ export class AccountService {
       new AccountBalance(28981.98, null, null, new Date(2018, 5, 30)),
       new AccountBalance(41584.64, null, null, new Date(2018, 6, 31)),
 
-      new AccountBalance(41584.6 - 23700 + 12000, null, null, new Date(2018, 7, 31)),
+      new AccountBalance(12665.14, null, null, new Date(2018, 7, 31)),
     ], true, false, 'Savings');
   }
 
