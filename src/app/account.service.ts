@@ -47,7 +47,6 @@ export class AccountService {
       new AccountBalance(-1416.20, null, null, new Date(2018, 4, 31)),
       new AccountBalance(0, null, null, new Date(2018, 5, 30)),
       new AccountBalance(-3319.87, null, null, new Date(2018, 6, 31)),
-
       new AccountBalance(286.63, null, null, new Date(2018, 7, 31)),
     ], false, false, 'Credit');
   }
